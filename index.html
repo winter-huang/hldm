@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+
+    <script src="js/jQuery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/template-native.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/template" id="carousel">
+        <%for(var i=0;i< items.length;i++){%>
+        <div class="item">
+            <a href="<%=items[i].url%>"><img src="<%=items[i].img%>" alt=""></a>
+            <div class="carousel-caption">
+                <%=items[i].title%>
+            </div>
+        </div>
+        <%}%>
+    </script>
+    <script type="text/template" id="tabList_1">
+        <%for(var i=0;i< items.length;i++){%>
+            <li>
+                <a href="<%=items[i].url%>"><img src="<%=items[i].img%>" alt=""></a>
+                <p><%=items[i].update%></p>
+            </li>
+        <%}%>
+</script>
+    
+
+
+</head>
+<body>
+<div class="content">
+    <nav>
+        <i class="fa fa-bars"></i>
+        <h1>红旅动漫</h1>
+        <i class="fa fa-search"></i>
+    </nav>
+    <main>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <!--动态添加轮播图图片-->
+            </div>
+        </div>
+        <div class="tab-nav">
+            <ul>
+                <li>新增连载</li>
+                <li>新增完结</li>
+                <li>推荐连载</li>
+                <li>推荐完结</li>
+            </ul>
+        </div>
+        <div class="tab-list">
+            <ul class="tabList_1 active">
+                <!--生成动态数据-->
+            </ul>
+        </div>
+
+    </main>
+</div>
+
+<aside>
+    <div class="cover"></div>
+    <ul>
+        <li class="active"><img src="images/logo.png" alt=""></li>
+        <li class="loaded">连载动漫</li>
+        <li class="list">专题列表</li>
+        <li>关于</li>
+    </ul>
+</aside>
+
+</body>
+</html>

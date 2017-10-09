@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        width: 100px;
+        height: 50px;
+        border: 1px solid red;
+        list-style: none;
+    }
+
+    div {
+        width: 400px;
+        height: 300px;
+        background-color: #00a0e9;
+        display: none;
+    }
+</style>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<main>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</main>
+
+<script src="js/jQuery.min.js"></script>
+<script>
+        $('ul li').on('click', function () {
+            $(this).css('backgroundColor','blue').siblings().css('backgroundColor','');
+            var index = $(this).index();
+            console.log(index);
+            $('div').eq(index).css('display', 'block').siblings().css('display','none');
+
+        })
+
+
+
+</script>
+
+</body>
+</html>
